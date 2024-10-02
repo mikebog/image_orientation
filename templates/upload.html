@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Определение ориентации справки 405</title>
+    <style>
+        #loading {
+            display: none; 
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Определение ориентации справки 405</h1>
+    <form id="uploadForm" method="post" enctype="multipart/form-data" action="/upload">
+        <input type="file" name="file" required>
+        <button type="submit">Отправить</button>
+    </form>
+    
+    <p id="loading">Пожалуйста, подождите...</p>
+
+    <script>
+        const form = document.getElementById("uploadForm");
+        const loadingMessage = document.getElementById("loading");
+
+        form.addEventListener("submit", function(event) {
+            
+            loadingMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>
